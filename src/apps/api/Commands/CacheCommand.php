@@ -15,7 +15,7 @@ final class CacheCommand extends Command
 
     private $last_zip_code=0;
 
-    public function handle()
+   /* public function handle()
     {
         $this->info("Iniciando proceso de Cache");
         //$s = new Settlement();
@@ -39,8 +39,8 @@ final class CacheCommand extends Command
         }
         $this->info("Finalizado proceso de Cache");
     }
-
-   /* public function exhandle()
+*/
+    public function handle()
     {
         $this->info("Iniciando proceso de Cache");
         $settlements = Settlement::distinct()->get(['zip_code']);
@@ -54,5 +54,4 @@ final class CacheCommand extends Command
         }
 
     }
-    */
 }
