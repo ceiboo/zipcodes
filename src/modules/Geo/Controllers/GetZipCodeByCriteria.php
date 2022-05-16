@@ -44,8 +44,6 @@ final class GetZipCodeByCriteria
 
         //if(Cache::has($zip_code)) {
             $query = Cache::get($zip_code);
-            dd($query);
-            exit(0);
         /*} else {
             $query = Settlement::with('city','city.entity')->where('zip_code', $zip_code)->get()->toArray();
             if(!count($query)){
