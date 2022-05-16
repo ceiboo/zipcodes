@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/joseluis/Projects/ceiboo_2022/laravel-zip'
+make: Leaving directory '/home/joseluis/Projects/ceiboo_2022/laravel-zip'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

@@ -1,0 +1,16 @@
+/storage
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.docker/phpmyadmin
+/.docker/nginx/phpmyadmin.conf
+.idea/*
+#/src/apps/*/Framework/config/config.php
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
