@@ -2,8 +2,8 @@
 Proyecto de Investigación
 
 ### Instalación ###
-* `git clone git@github.com:Ceiboo/laravel-zip.git`
-* `cd laravel-zip`
+* `git clone git@github.com:Ceiboo/zipcodes.git`
+* `cd zipcodes`
 * `docker-compose build main`
 * `docker-compose up -d`
 * `docker-compose exec main composer update`
