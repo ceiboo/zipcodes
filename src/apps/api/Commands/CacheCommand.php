@@ -43,14 +43,14 @@ final class CacheCommand extends Command
     public function handle()
     {
         $this->info("Iniciando proceso de Cache");
-        $settlements = Settlement::distinct()->get(['zip_code']);
+        $settlements = Settlement::distinct()->where('id','<',1000)->get(['zip_code']);
         foreach($settlements as $settlement)
         {
             $zip_code = $settlement['zip_code'];
             $this->info($zip_code);
-            Cache::rememberForever($settlement['zip_code'], function() use($zip_code) {
+            Cache::put($settlement['zip_code'], function() use($zip_code) {
                 return Settlement::with('city','city.entity')->where('zip_code', $zip_code)->get()->toArray();
-            });
+            }, 28800);
         }
 
     }
