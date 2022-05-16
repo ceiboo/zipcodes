@@ -48,9 +48,9 @@ final class CacheCommand extends Command
         {
             $zip_code = $settlement['zip_code'];
             $this->info($zip_code);
-            Cache::put($settlement['zip_code'], function() use($zip_code) {
+            Cache::remember($settlement['zip_code'], 28800, function() use($zip_code) {
                 return Settlement::with('city','city.entity')->where('zip_code', $zip_code)->get()->toArray();
-            }, 28800);
+            });
         }
 
     }
