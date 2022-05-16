@@ -30,6 +30,17 @@ final class GetZipCodeByCriteria
             return CityNotExist::Error();
         }
         */
+        //$this->info("Iniciando proceso de Cache");
+        $settlements = Settlement::distinct()->where('id','<',100)->get(['zip_code']);
+        foreach($settlements as $settlement)
+        {
+            $zip_code = $settlement['zip_code'];
+            //$this->info($zip_code);
+            Cache::rememberForever($settlement['zip_code'], function() use($zip_code) {
+                return Settlement::with('city','city.entity')->where('zip_code', $zip_code)->get()->toArray();
+            });
+        }
+
 
         //if(Cache::has($zip_code)) {
             $query = Cache::get($zip_code);
