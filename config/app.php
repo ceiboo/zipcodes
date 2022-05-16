@@ -175,7 +175,6 @@ return [
         App\Providers\EventServiceProvider::class,
         //App\Providers\RouteServiceProvider::class,
 
-        Ceiboo\Api\Framework\Providers\ApiServiceProvider::class,
         Ceiboo\Api\Framework\Providers\RouteServiceProvider::class,
         Ceiboo\Modules\Geo\Providers\GeoServiceProvider::class,
 
