@@ -12,7 +12,7 @@ class GeoServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../Database/Migrations');
         $this->commands([
             \Ceiboo\Api\Commands\ImportCommand::class,
-            \Ceiboo\Api\Commands\CacheCommand::class
+            \Ceiboo\Api\Commands\QueryCommand::class
         ]);
     }
 }

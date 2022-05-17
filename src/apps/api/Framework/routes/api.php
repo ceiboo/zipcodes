@@ -6,5 +6,4 @@ Route::middleware(['api'])->namespace('Ceiboo\Api\Controllers')->group(function 
     Route::get('status', 'Status\StatusGetController');
 
     Route::get('zip-codes/{zip_code}', 'ZipCodes\ZipCodesGetController');
-    Route::get('zip-codes-cache/', 'ZipCodes\ZipCodesPutCacheController');
 });

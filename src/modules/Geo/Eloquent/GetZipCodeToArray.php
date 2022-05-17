@@ -9,7 +9,7 @@ final class GetZipCodeToArray
     static public function toArray(string $zip_code, array $city, array $settlements):array
     {
         // Map Domain User model values
-        return [ 'data' => [
+        return [
             'zip_code' => $zip_code,
             'locality' => $city['locality'],
             'federal_entity' => [
@@ -22,7 +22,6 @@ final class GetZipCodeToArray
                 'key'=> $city['key'],
                 'name'=> $city['name'],
             ]
-        ],
-        'code' => 200];
+        ];
     }
 }
