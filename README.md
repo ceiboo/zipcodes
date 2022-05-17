@@ -13,13 +13,13 @@ Proyecto de Investigación
 En tu archivo /etc/hosts incluir las siguientes lineas
 * `127.0.0.1 api.ceiboo.jla`
 
-### Importar datos de correo ###
-- Test de instalación en terminal:
-* `docker-compose exec main php artisan migrate:fresh`
-* `docker-compose exec main php artisan api:import`
-
 - Test de instalación en navegador:
 * `http://api.ceiboo.jla/api/status`
+
+### Importar datos de correo ###
+* `docker-compose exec main php artisan migrate:fresh`
+* `docker-compose exec main php artisan api:import`
+* `docker-compose exec main php artisan api:query`
 
 ### Otros comandos ###
 Para bajar los dockers
